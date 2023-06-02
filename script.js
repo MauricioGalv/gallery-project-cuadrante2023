@@ -1,5 +1,5 @@
 const countdown = () => {
-    const countDate = new Date('October 5, 2023 00:00:00').getTime()
+    const countDate = new Date('October 5 2023 00:00:00').getTime()
     const now = new Date().getTime();
     const gap = countDate - now;
 
@@ -13,14 +13,15 @@ const countdown = () => {
     const textMinute = Math.floor((gap % hour) / minute);
     const textSecond = Math.floor((gap % minute) / second);
 
+    if(gap < 0) {
+        return;
+    };
+    console.log(gap)
+
     document.querySelector('.day').innerText = textDay;
     document.querySelector('.hour').innerText = textHour;
     document.querySelector('.minute').innerText = textMinute;
     document.querySelector('.second').innerText = textSecond;
-
-    if(gap < 10000) {
-        console.log('ahora')
-    }
 };
 
 
