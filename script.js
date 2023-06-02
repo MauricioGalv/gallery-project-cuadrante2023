@@ -16,7 +16,6 @@ const countdown = () => {
     if(gap < 0) {
         return;
     };
-    console.log(gap)
 
     document.querySelector('.day').innerText = textDay;
     document.querySelector('.hour').innerText = textHour;
